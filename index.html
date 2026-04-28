@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My FXML Portal</title>
+    <style>
+        body { background: #111; color: #fff; font-family: sans-serif; margin: 0; padding: 50px; }
+        h1 { color: #f0ad4e; }
+        .item { 
+            padding: 20px; 
+            margin: 10px 0; 
+            background: #222; 
+            border: 2px solid transparent; 
+            font-size: 24px; 
+        }
+        .item.active { 
+            background: #444; 
+            border-color: #f0ad4e; 
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <h1>Мой Портал MAG322</h1>
+    <div id="menu">
+        <div class="item active" data-url="https://ur5lgq.github.io/myportal/playlist.m3u">Мой плейлист IPTV</div>
+        <div class="item" data-url="http://34.178.51.187//low.m3u8">Мой stream</div>
+    </div>
+
+    <script type="text/javascript">
+        var items = document.querySelectorAll('.item');
+        var currentIndex = 0;
+
+        // Инициализация приставки MAG
+        if (window.stb) {
+            stb.InitPlayer();
+        }
+
+        document.addEventListener('keydown', function(e) {
+            items[currentIndex].classList.remove('active');
+
+            if (e.keyCode === 38) { // Вверх
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+            } else if (e.keyCode === 40) { // Вниз
+                currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+            } else if (e.keyCode === 13) { // OK
+                var url = items[currentIndex].getAttribute('data-url');
+                playContent(url);
+            }
+
+            items[currentIndex].classList.add('active');
+        });
+
+        function playContent(url) {
+            if (window.stb) {
+                stb.Play(url);
+            } else {
+                alert('Запуск потока: ' + url);
+            }
+        }
+    </script>
+</body>
+</html>
