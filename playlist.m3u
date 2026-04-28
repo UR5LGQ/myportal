@@ -1,0 +1,200 @@
+#EXTINF:-1 tvg-id="276" group_id="20" group-title="Украинские" tvg-name="1+1 [UA]" catchup="append" catchup-source="?utc=${start}" timeshift="14" catchup-days="14" tvg-rec="14" tvg-logo="http://api.iptv.so/logo/200_115_0/276.png", 1+1 [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/276
+#EXTINF:-1 tvg-id="1892" group_id="20" group-title="Украинские" tvg-name="1+1 HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1892.png", 1+1 HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1892
+#EXTINF:-1 tvg-id="296" group_id="20" group-title="Украинские" tvg-name="2+2 [UA]" catchup="append" catchup-source="?utc=${start}" timeshift="14" catchup-days="14" tvg-rec="14" tvg-logo="http://api.iptv.so/logo/200_115_0/296.png", 2+2 [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/296
+#EXTINF:-1 tvg-id="1893" group_id="20" group-title="Украинские" tvg-name="2+2 HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1893.png", 2+2 HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1893
+#EXTINF:-1 tvg-id="513" group_id="20" group-title="Украинские" tvg-name="5 канал Украина [UA]" catchup="append" catchup-source="?utc=${start}" timeshift="14" catchup-days="14" tvg-rec="14" tvg-logo="http://api.iptv.so/logo/200_115_0/513.png", 5 канал Украина [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/513
+#EXTINF:-1 tvg-id="1895" group_id="20" group-title="Украинские" tvg-name="5 канал HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1895.png", 5 канал HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1895
+#EXTINF:-1 tvg-id="1896" group_id="20" group-title="Украинские" tvg-name="Апостроф [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1896.png", Апостроф [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1896
+#EXTINF:-1 tvg-id="1897" group_id="20" group-title="Украинские" tvg-name="Київ [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1897.png", Київ [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1897
+#EXTINF:-1 tvg-id="1898" group_id="20" group-title="Украинские" tvg-name="Перший [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1898.png", Перший [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1898
+#EXTINF:-1 tvg-id="1899" group_id="20" group-title="Украинские" tvg-name="Перший HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1899.png", Перший HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1899
+#EXTINF:-1 tvg-id="1900" group_id="20" group-title="Украинские" tvg-name="Прямий [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1900.png", Прямий [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1900
+#EXTINF:-1 tvg-id="1901" group_id="20" group-title="Украинские" tvg-name="Прямий HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1901.png", Прямий HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1901
+#EXTINF:-1 tvg-id="1902" group_id="20" group-title="Украинские" tvg-name="ПравдаТУТ HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1902.png", ПравдаТУТ HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1902
+#EXTINF:-1 tvg-id="1903" group_id="20" group-title="Украинские" tvg-name="OBOZREVATEL HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1903.png", OBOZREVATEL HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1903
+#EXTINF:-1 tvg-id="514" group_id="20" group-title="Украинские" tvg-name="Эспресо TV [UA]" catchup="append" catchup-source="?utc=${start}" timeshift="14" catchup-days="14" tvg-rec="14" tvg-logo="http://api.iptv.so/logo/200_115_0/514.png", Эспресо TV [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/514
+#EXTINF:-1 tvg-id="1904" group_id="20" group-title="Украинские" tvg-name="Эспресо TV HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1904.png", Эспресо TV HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1904
+#EXTINF:-1 tvg-id="1905" group_id="20" group-title="Украинские" tvg-name="Унiан HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1905.png", Унiан HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1905
+#EXTINF:-1 tvg-id="397" group_id="20" group-title="Украинские" tvg-name="Бігуді [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/397.png", Бігуді [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/397
+#EXTINF:-1 tvg-id="1906" group_id="20" group-title="Украинские" tvg-name="Дача [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1906.png", Дача [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1906
+#EXTINF:-1 tvg-id="1907" group_id="20" group-title="Украинские" tvg-name="ECO TV [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1907.png", ECO TV [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1907
+#EXTINF:-1 tvg-id="279" group_id="20" group-title="Украинские" tvg-name="Интер [UA]" catchup="append" catchup-source="?utc=${start}" timeshift="14" catchup-days="14" tvg-rec="14" tvg-logo="http://api.iptv.so/logo/200_115_0/279.png", Интер [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/279
+#EXTINF:-1 tvg-id="1908" group_id="20" group-title="Украинские" tvg-name="Интер HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1908.png", Интер HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1908
+#EXTINF:-1 tvg-id="1909" group_id="20" group-title="Украинские" tvg-name="K1 HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1909.png", K1 HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1909
+#EXTINF:-1 tvg-id="1910" group_id="20" group-title="Украинские" tvg-name="K2 HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1910.png", K2 HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1910
+#EXTINF:-1 tvg-id="398" group_id="20" group-title="Украинские" tvg-name="Квартал ТВ [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/398.png", Квартал ТВ [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/398
+#EXTINF:-1 tvg-id="1911" group_id="20" group-title="Украинские" tvg-name="Суспільне Культура [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1911.png", Суспільне Культура [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1911
+#EXTINF:-1 tvg-id="295" group_id="20" group-title="Украинские" tvg-name="Мега [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/295.png", Мега [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/295
+#EXTINF:-1 tvg-id="1912" group_id="20" group-title="Украинские" tvg-name="Mega HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1912.png", Mega HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1912
+#EXTINF:-1 tvg-id="1913" group_id="20" group-title="Украинские" tvg-name="Надия [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1913.png", Надия [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1913
+#EXTINF:-1 tvg-id="1914" group_id="20" group-title="Украинские" tvg-name="Наука [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1914.png", Наука [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1914
+#EXTINF:-1 tvg-id="255" group_id="20" group-title="Украинские" tvg-name="Новый канал [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/255.png", Новый канал [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/255
+#EXTINF:-1 tvg-id="1915" group_id="20" group-title="Украинские" tvg-name="Новый канал HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1915.png", Новый канал HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1915
+#EXTINF:-1 tvg-id="278" group_id="20" group-title="Украинские" tvg-name="НТН [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/278.png", НТН [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/278
+#EXTINF:-1 tvg-id="1916" group_id="20" group-title="Украинские" tvg-name="НТН HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1916.png", НТН HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1916
+#EXTINF:-1 tvg-id="1917" group_id="20" group-title="Украинские" tvg-name="ОЦЕ [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1917.png", ОЦЕ [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1917
+#EXTINF:-1 tvg-id="1918" group_id="20" group-title="Украинские" tvg-name="ОЦЕ HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1918.png", ОЦЕ HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1918
+#EXTINF:-1 tvg-id="1919" group_id="20" group-title="Украинские" tvg-name="Первый Автомобильный [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1919.png", Первый Автомобильный [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1919
+#EXTINF:-1 tvg-id="1920" group_id="20" group-title="Украинские" tvg-name="ПлюсПлюс [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1920.png", ПлюсПлюс [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1920
+#EXTINF:-1 tvg-id="1921" group_id="20" group-title="Украинские" tvg-name="ПлюсПлюс HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1921.png", ПлюсПлюс HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1921
+#EXTINF:-1 tvg-id="1930" group_id="20" group-title="Украинские" tvg-name="Сонце [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1930.png", Сонце [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1930
+#EXTINF:-1 tvg-id="277" group_id="20" group-title="Украинские" tvg-name="СТБ [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/277.png", СТБ [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/277
+#EXTINF:-1 tvg-id="1922" group_id="20" group-title="Украинские" tvg-name="СТБ HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1922.png", СТБ HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1922
+#EXTINF:-1 tvg-id="280" group_id="20" group-title="Украинские" tvg-name="ТЕТ [UA]" catchup="append" catchup-source="?utc=${start}" timeshift="14" catchup-days="14" tvg-rec="14" tvg-logo="http://api.iptv.so/logo/200_115_0/280.png", ТЕТ [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/280
+#EXTINF:-1 tvg-id="1923" group_id="20" group-title="Украинские" tvg-name="ТЕТ HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1923.png", ТЕТ HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1923
+#EXTINF:-1 tvg-id="1924" group_id="20" group-title="Украинские" tvg-name="Terra [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1924.png", Terra [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1924
+#EXTINF:-1 tvg-id="1925" group_id="20" group-title="Украинские" tvg-name="Трофей [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1925.png", Трофей [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1925
+#EXTINF:-1 tvg-id="1926" group_id="20" group-title="Украинские" tvg-name="Niki Junior [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1926.png", Niki Junior [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1926
+#EXTINF:-1 tvg-id="1927" group_id="20" group-title="Украинские" tvg-name="Niki Junior HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1927.png", Niki Junior HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1927
+#EXTINF:-1 tvg-id="1928" group_id="20" group-title="Украинские" tvg-name="Niki Kids [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1928.png", Niki Kids [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1928
+#EXTINF:-1 tvg-id="1929" group_id="20" group-title="Украинские" tvg-name="Niki Kids HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1929.png", Niki Kids HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1929
+#EXTINF:-1 tvg-id="501" group_id="20" group-title="Украинские" tvg-name="M1 [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/501.png", M1 [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/501
+#EXTINF:-1 tvg-id="1931" group_id="20" group-title="Украинские" tvg-name="М1 HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1931.png", М1 HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1931
+#EXTINF:-1 tvg-id="502" group_id="20" group-title="Украинские" tvg-name="M2 [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/502.png", M2 [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/502
+#EXTINF:-1 tvg-id="1932" group_id="20" group-title="Украинские" tvg-name="М2 HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1932.png", М2 HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1932
+#EXTINF:-1 tvg-id="1933" group_id="20" group-title="Украинские" tvg-name="Zoom HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1933.png", Zoom HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1933
+#EXTINF:-1 tvg-id="1934" group_id="20" group-title="Украинские" tvg-name="BOLT [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1934.png", BOLT [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1934
+#EXTINF:-1 tvg-id="1935" group_id="20" group-title="Украинские" tvg-name="BOLT HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1935.png", BOLT HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1935
+#EXTINF:-1 tvg-id="294" group_id="20" group-title="Украинские" tvg-name="Enter Film [UA]" catchup="append" catchup-source="?utc=${start}" timeshift="14" catchup-days="14" tvg-rec="14" tvg-logo="http://api.iptv.so/logo/200_115_0/294.png", Enter Film [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/294
+#EXTINF:-1 tvg-id="1936" group_id="20" group-title="Украинские" tvg-name="Enter Film HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1936.png", Enter Film HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1936
+#EXTINF:-1 tvg-id="1937" group_id="20" group-title="Украинские" tvg-name="FILMUADrama [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1937.png", FILMUADrama [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1937
+#EXTINF:-1 tvg-id="292" group_id="20" group-title="Украинские" tvg-name="ICTV [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/292.png", ICTV [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/292
+#EXTINF:-1 tvg-id="1938" group_id="20" group-title="Украинские" tvg-name="ICTV HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1938.png", ICTV HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1938
+#EXTINF:-1 tvg-id="539" group_id="20" group-title="Украинские" tvg-name="Setanta Sports HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/539.png", Setanta Sports HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/539
+#EXTINF:-1 tvg-id="1777" group_id="20" group-title="Украинские" tvg-name="Setanta Sports+ HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1777.png", Setanta Sports+ HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1777
+#EXTINF:-1 tvg-id="1939" group_id="20" group-title="Украинские" tvg-name="Xsport [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1939.png", Xsport [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1939
+#EXTINF:-1 tvg-id="1940" group_id="20" group-title="Украинские" tvg-name="Xsport HD [UA]" tvg-logo="http://api.iptv.so/logo/200_115_0/1940.png", Xsport HD [UA]
+#EXTGRP:Украинские
+http://kkja.shott.top/p/21fe0b727a41639f47bce8663f7c3a79/1940
+#EXTINF:-1, Приятного просмотра
+https://alensat.at.ua/alensat.com.mp4
