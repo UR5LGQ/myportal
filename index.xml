@@ -9,6 +9,6 @@
     <channel>
         <title>Фильмы 2024</title>
         <logo_30x30></logo_30x30>
-        <stream_url>http://34.178.51.187/index.php</stream_url>
+        <stream_url>http://34.178.51.187//low.m3u8</stream_url>
     </channel>
 </items>
