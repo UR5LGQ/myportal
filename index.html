@@ -1,125 +1,31 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAG322 Portal</title>
-    <style>
-        body { 
-            background: #000; 
-            color: #fff; 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 40px; 
-            overflow: hidden; 
-        }
-        h1 { color: #ffaa00; font-size: 28px; border-bottom: 2px solid #333; padding-bottom: 10px; }
-        #menu { margin-top: 20px; }
-        .item { 
-            padding: 15px 25px; 
-            margin: 10px 0; 
-            background: #1a1a1a; 
-            border-left: 5px solid transparent; 
-            font-size: 22px; 
-            transition: 0.2s;
-        }
-        .item.active { 
-            background: #333; 
-            border-left: 5px solid #ffaa00; 
-            color: #ffaa00;
-            transform: translateX(10px);
-        }
-        #loader { 
-            display: none; 
-            position: fixed; 
-            top: 50%; 
-            left: 50%; 
-            transform: translate(-50%, -50%); 
-            background: rgba(0,0,0,0.8); 
-            padding: 20px; 
-            border: 1px solid #ffaa00; 
-            border-radius: 10px;
-            z-index: 100;
-        }
-        .footer { position: fixed; bottom: 20px; color: #666; font-size: 14px; }
-    </style>
+  <meta charset="utf-8">
+  <title>IPTV Player</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </head>
 <body>
 
-    <h1>Мой Портал MAG322</h1>
-    
-    <div id="menu">
-        <div class="item active" data-url="https://ur5lgq.github.io/myportal/playlist.m3u">Мой плейлист IPTV (M3U)</div>
-        <div class="item" data-url="http://34.178.51.187//low.m3u8">Прямой эфир (M3U8)</div>
-        <div class="item" data-url="http://34.178.51.187/index.php">Фильмы 2024</div>
-    </div>
+<video id="video" controls autoplay style="width:100%; max-width:900px;"></video>
 
-    <div id="loader">ЗАГРУЗКА ПОТОКА...</div>
+<script>
+const video = document.getElementById('video');
+const videoSrc = "playlist.m3u8";
 
-    <div class="footer">Навигация: Вверх/Вниз. Запуск: OK. Назад: Back/Exit.</div>
+if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    // Safari
+    video.src = videoSrc;
+} 
+else if (Hls.isSupported()) {
+    const hls = new Hls();
+    hls.loadSource(videoSrc);
+    hls.attachMedia(video);
+} 
+else {
+    alert("HLS не поддерживается в этом браузере");
+}
+</script>
 
-    <script type="text/javascript">
-        var items = document.querySelectorAll('.item');
-        var currentIndex = 0;
-        var loader = document.getElementById('loader');
-
-        // Инициализация приставки
-        try {
-            if (typeof(stb) !== 'undefined') {
-                stb.InitPlayer();
-                stb.SetVideoControl(1); // Включить видео поверх интерфейса
-                stb.SetVideoAspect(0x10); // 16:9
-            }
-        } catch(e) { console.log('STB API не найден'); }
-
-        function playContent(url) {
-            loader.style.display = 'block';
-            
-            if (typeof(stb) !== 'undefined') {
-                stb.Stop();
-                // Для MAG322 лучше использовать принудительное указание решения через ffmpeg или просто Play
-                setTimeout(function() {
-                    stb.Play(url);
-                }, 100);
-            } else {
-                alert('Эмуляция плеера. Ссылка: ' + url);
-                loader.style.display = 'none';
-            }
-        }
-
-        // Слушатель кнопок
-        document.addEventListener('keydown', function(e) {
-            var code = e.keyCode || e.which;
-
-            // Управление списком
-            if (code === 38) { // Вверх
-                items[currentIndex].classList.remove('active');
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
-                items[currentIndex].classList.add('active');
-            } 
-            else if (code === 40) { // Вниз
-                items[currentIndex].classList.remove('active');
-                currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
-                items[currentIndex].classList.add('active');
-            } 
-            else if (code === 13 || code === 273) { // OK (Стандартный или MAG)
-                var url = items[currentIndex].getAttribute('data-url');
-                playContent(url);
-            } 
-            else if (code === 8 || code === 27) { // Назад или Exit
-                if (typeof(stb) !== 'undefined') {
-                    stb.Stop();
-                    loader.style.display = 'none';
-                }
-            }
-        });
-
-        // Скрывать лоадер через 10 секунд в любом случае
-        setInterval(function() {
-            if (loader.style.display === 'block') {
-                loader.style.display = 'none';
-            }
-        }, 10000);
-    </script>
 </body>
 </html>
