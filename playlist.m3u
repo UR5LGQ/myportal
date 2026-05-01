@@ -1,36 +1,55 @@
 #EXTM3U
-#EXTINF:-1,Аколіт s01e01 (Цікава Ідея)
-http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e01.ci.mvo_98689/hls/1080/index.m3u8
-#EXTINF:-1,Аколіт s01e02 (Цікава Ідея)
-http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e02.ci.mvo_98690/hls/1080/index.m3u8
-#EXTINF:-1,Аколіт s01e03 (Цікава Ідея)
-http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e03.ci.mvo_99086/hls/1080/index.m3u8
-#EXTINF:-1,Аколіт s01e04 (Цікава Ідея)
-http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e04.ci.mvo_99347/hls/1080/index.m3u8
-#EXTINF:-1,Аколіт s01e05 (Цікава Ідея)
-http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e05.ci.mvo_99541/hls/1080/index.m3u8
-#EXTINF:-1,Аколіт s01e06 (Цікава Ідея)
-http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e06.ci.mvo_99809/hls/1080/index.m3u8
-#EXTINF:-1,Аколіт s01e07 (Цікава Ідея)
-http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e07.ci.mvo_100188/hls/1080/index.m3u8
-#EXTINF:-1,Аколіт s01e08 (Цікава Ідея)
-http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e08.ci.mvo_100193/hls/1080/index.m3u8
-
-#EXTINF:-1,Пінгвін 1 серія
-http://ashdi.vip/video27/2/new/the.penguin.s01e01.ua_142840/hls/1080/BqiXiHWGjudYkxH+B4s=/index.m3u8
-#EXTINF:-1,Пінгвін 2 серія
-http://ashdi.vip/video27/2/serials/the.penguin.s01e02.inside.man.2024.amzn.webdl.1080p_144965/hls/1080/BqiXiHWGjudYkxH+B4s=/index.m3u8
-#EXTINF:-1,Пінгвін 3 серія
-http://ashdi.vip/video27/2/new/the.penguin.s01e03.bliss.2024.amzn.webdl.1080p_145384/hls/1080/BqiXiHWGjudYkxH+B4s=/index.m3u8
-#EXTINF:-1,Пінгвін 4 серія
-http://ashdi.vip/video27/2/films/the.penguin.s01e04.centanni.2024.amzn.webdl.1080p_146588/hls/1080/BqiXiHWGjudYkxH+B4s=/index.m3u8
-#EXTINF:-1,Пінгвін 5 серія
-http://ashdi.vip/video27/2/serials/the.penguin.s01e05.homecoming.2024.amzn.webdl.1080p_147425/hls/1080/BqiXiHWGjudYkxH+B4s=/index.m3u8
-#EXTINF:-1,Пінгвін 6 серія
-http://ashdi.vip/video6/2/new/the.penguin.s01e06.ua.mvo.mggsunnysiders_148596/hls/1080/BqiXiHWGjudYkxH+B4s=/index.m3u8
-#EXTINF:-1,Пінгвін 7 серія
-http://ashdi.vip/video6/2/new/the.penguin.s01e07.top.hat.2024.amzn.webdl.1080p_149673/hls/1080/BqiXiHWGjudYkxH+B4s=/index.m3u8
-#EXTINF:-1,Пінгвін 8 серія
-http://ashdi.vip/video19/2/new/the.penguin.s01e08.a.great.or.little.thing.2024.amzn.webdl.1080p_150687/hls/BqiXiHWGjudYkxH+B4s=/index.m3u8
+#EXTINF:-1 ,UA:Перший
+https://ext.cdn.nashnet.tv/228.0.2.45/index.m3u8
+#EXTINF:-1 ,Прямий HD
+https://ext.cdn.nashnet.tv/228.0.0.122/index.m3u8
+#EXTINF:-1 ,Київ ТБ HD
+https://ext.cdn.nashnet.tv/228.0.0.15/index.m3u8
+#EXTINF:-1 ,5 Канал HD
+https://ext.cdn.nashnet.tv/228.0.4.26/index.m3u8
+#EXTINF:-1 ,Рада HD
+https://ext.cdn.nashnet.tv/228.0.0.24/index.m3u8
+#EXTINF:-1 ,Суспільне Київ
+https://ext.cdn.nashnet.tv/228.0.0.41/index.m3u8
+#EXTINF:-1 ,Суспільне Крим
+https://ext.cdn.nashnet.tv/228.0.0.71/index.m3u8
+#EXTINF:-1 ,Суспільне Культура
+https://ext.cdn.nashnet.tv/228.0.0.141/index.m3u8
+#EXTINF:-1 ,8 Канал UA HD
+https://ext.cdn.nashnet.tv/228.0.0.138/index.m3u8
+#EXTINF:-1 ,24 Канал UA
+https://ext.cdn.nashnet.tv/228.0.0.33/index.m3u8
+#EXTINF:-1 ,Наталі
+https://ext.cdn.nashnet.tv/228.0.0.140/index.m3u8
+#EXTINF:-1 ,ЕКО–ТВ UA
+https://ext.cdn.nashnet.tv/228.0.1.60/index.m3u8
+#EXTINF:-1 ,Чорноморська ТРК
+https://ext.cdn.nashnet.tv/228.0.0.136/index.m3u8
+#EXTINF:-1 ,CNN
+https://ext.cdn.nashnet.tv/228.0.0.75/index.m3u8
+#EXTINF:-1 ,Надiя ТВ
+https://ext.cdn.nashnet.tv/228.0.0.172/index.m3u8
+#EXTINF:-1 ,Перший західний HD
+https://ext.cdn.nashnet.tv/228.0.0.162/index.m3u8
+#EXTINF:-1 ,Сонце
+https://ext.cdn.nashnet.tv/228.0.0.165/index.m3u8
+#EXTINF:-1 ,Еспресо TV HD
+https://ext.cdn.nashnet.tv/228.0.0.191/index.m3u8
+#EXTINF:-1 ,ATR HD
+https://ext.cdn.nashnet.tv/228.0.0.49/index.m3u8
+#EXTINF:-1 ,Lale HD
+https://ext.cdn.nashnet.tv/228.0.0.50/index.m3u8
+#EXTINF:-1 ,Milady television
+https://ext.cdn.nashnet.tv/228.0.1.45/index.m3u8
+#EXTINF:-1 ,КАРАВАН-ТВ UA
+https://ext.cdn.nashnet.tv/228.0.2.30/index.m3u8
+#EXTINF:-1 ,Обозреватель HD
+https://ext.cdn.nashnet.tv/228.0.0.148/index.m3u8
+#EXTINF:-1 ,Megogo live HD
+https://ext.cdn.nashnet.tv/228.0.2.214/index.m3u8
+#EXTINF:-1 ,Апостроф TV HD
+https://ext.cdn.nashnet.tv/228.0.2.165/index.m3u8
+#EXTINF:-1 ,Ісландія HD
+https://ext.cdn.nashnet.tv/228.0.3.231/index.m3u8
 #EXTINF:-1,Мой сервер
 http://34.178.51.187//low.m3u8
