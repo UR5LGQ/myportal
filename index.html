@@ -117,10 +117,9 @@ async function loadPlaylist(){
     if(currentIndex === -1 && channels.length){
       playChannel(0);
     } else if (JSON.stringify(channels) !== oldChannelsJson && currentIndex >= 0 && channels[currentIndex]) {
-      const current = channels[currentIndex];
-      video.src = current.url;
-      titleOverlay.textContent = current.title;
-      urlDisplay.textContent = current.url;
+      const idx = currentIndex;
+      currentIndex = -1;
+      playChannel(idx);
     }
 
     setStatus('Playlist загружен');
@@ -166,3 +165,4 @@ setInterval(loadPlaylist,10000);
 
 </body>
 </html>
+
