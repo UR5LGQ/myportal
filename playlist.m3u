@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1,Мой сервер
-http://34.178.51.187/low.m3u8
+http://34.178.51.187//low.m3u8
 #EXTINF:-1,Аколіт s01e01 (Цікава Ідея)
 http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e01.ci.mvo_98689/hls/1080/index.m3u8
 #EXTINF:-1,Аколіт s01e02 (Цікава Ідея)
