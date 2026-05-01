@@ -1,9 +1,8 @@
 #EXTM3U
-#EXTM3U
 #EXTINF:0,ICTV HD UA
 http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6302/index.m3u8
 #EXTINF:0,ICTV UA
-http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6339/index.m3u8
+https://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6339/index.m3u8
 #EXTINF:0,ICTV 2 HD UA
 http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/15235/index.m3u8
 #EXTINF:0,1+1 Україна FHD UA
@@ -13,11 +12,11 @@ http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31784/index.m3u8
 #EXTINF:0,1+1 Марафон HD UA
 http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6317/index.m3u8
 #EXTINF:0,1+1 Марафон UA
-http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/994/index.m3u8
+https://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/994/index.m3u8
 #EXTINF:0,2+2 HD UA
 http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6378/index.m3u8
 #EXTINF:0,2+2 UA
-http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/995/index.m3u8
+https://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/995/index.m3u8
 #EXTINF:0,ТЕТ HD UA
 http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6377/index.m3u8
 #EXTINF:0,ТЕТ UA
@@ -181,4 +180,4 @@ http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/982/index.m3u8
 #EXTINF:-1, Приятного просмотра
 https://alensat.at.ua/alensat.com.mp4
 #EXTINF:-1,Мой сервер
-http://34.178.51.187//low.m3u8
+https://34.178.51.187//low.m3u8
