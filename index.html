@@ -148,13 +148,24 @@ async function playChannel(index){
   currentIndex = index;
   const ch = channels[index];
 
+  video.pause();
+  video.removeAttribute('src');
+  video.load();
+
+  await new Promise(r => setTimeout(r, 100));
+
   video.src = ch.url;
+  video.load();
+
   titleOverlay.textContent = ch.title;
   urlDisplay.textContent = ch.url;
 
   try{
     await video.play();
-  }catch{}
+  }catch(e){
+    console.error('Ошибка воспроизведения:', e);
+    setStatus('Ошибка воспроизведения видео');
+  }
 
   renderChannels();
 }
