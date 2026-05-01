@@ -1,7 +1,7 @@
 #EXTM3U
-#EXTINF:-1 ,UA:Перший
+#EXTINF:-1,UA:Перший
 https://ext.cdn.nashnet.tv/228.0.2.45/index.m3u8
-#EXTINF:-1 ,Прямий HD
+#EXTINF:-1,Прямий HD
 https://ext.cdn.nashnet.tv/228.0.0.122/index.m3u8
 #EXTINF:-1 ,Київ ТБ HD
 https://ext.cdn.nashnet.tv/228.0.0.15/index.m3u8
