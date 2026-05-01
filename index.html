@@ -2,18 +2,15 @@
 <html>
 <body>
 
-<h2>Содержимое playlist.m3u:</h2>
-<pre id="output">Загрузка...</pre>
+<video id="video" controls autoplay style="width:100%;max-width:900px;"></video>
 
 <script>
-fetch('playlist.m3u')
-  .then(response => response.text())
+fetch('playlist.m3u?t=' + Date.now())
+  .then(r => r.text())
   .then(text => {
-    document.getElementById('output').textContent = text;
-  })
-  .catch(error => {
-    document.getElementById('output').textContent =
-      'Ошибка загрузки: ' + error;
+    const lines = text.split('\n').map(l => l.trim());
+    const videoUrl = lines.find(line => line.startsWith('http'));
+    document.getElementById('video').src = videoUrl;
   });
 </script>
 
