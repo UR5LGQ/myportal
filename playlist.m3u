@@ -1,7 +1,3 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="744" tvg-logo="http://epg.cdntv.online/img/744.png" group-title="Украина",ЕКО-ТВ
-http://cdntv.online/high/7jic59vkp2tz/744.m3u8
-#EXTINF:-1 tvg-id="755" tvg-logo="http://epg.cdntv.online/img/755.png" group-title="Украина",Рада
-http://cdntv.online/high/7jic59vkp2tz/755.m3u8
 #EXTINF:-1,Сімейні мелодрами+
 http://bde.online24.pm/play/1669/16419D145D0E706/video.m3u8
