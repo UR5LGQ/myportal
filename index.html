@@ -2,138 +2,149 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Auto IPTV Player</title>
+<title>IPTV Portal</title>
 <style>
-  body {
-    background:#111;
-    color:#fff;
-    font-family:Arial,sans-serif;
-    text-align:center;
-    margin:0;
-    padding:20px;
-  }
-
-  #status {
-    margin-bottom:10px;
-    font-size:14px;
-    color:#aaa;
-  }
-
-  .player-wrapper {
-    position:relative;
-    width:100%;
-    max-width:900px;
-    margin:auto;
-  }
-
-  #video {
-    width:100%;
-    transition:opacity 0.5s ease;
-    opacity:1;
-    background:black;
-  }
-
-  #titleOverlay {
-    position:absolute;
-    top:10px;
-    left:10px;
-    background:rgba(0,0,0,0.65);
-    padding:8px 14px;
-    border-radius:8px;
-    font-size:18px;
-    color:#fff;
-    pointer-events:none;
-  }
-
-  .fade-out {
-    opacity:0.2;
-  }
+body{
+  background:#111;
+  color:#fff;
+  font-family:Arial;
+  margin:0;
+  padding:20px;
+  text-align:center;
+}
+#status{
+  margin-bottom:10px;
+  color:#aaa;
+}
+.player-wrapper{
+  position:relative;
+  max-width:900px;
+  margin:auto;
+}
+#video{
+  width:100%;
+  background:black;
+}
+#titleOverlay{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:rgba(0,0,0,.7);
+  padding:8px 14px;
+  border-radius:8px;
+}
+#channels{
+  margin-top:20px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+}
+.channel-btn{
+  padding:10px 16px;
+  border:none;
+  border-radius:8px;
+  background:#333;
+  color:#fff;
+  cursor:pointer;
+}
+.channel-btn:hover{
+  background:#555;
+}
+.channel-btn.active{
+  background:#0084ff;
+}
 </style>
 </head>
 <body>
 
-<div id="status">Инициализация...</div>
+<div id="status">Загрузка playlist...</div>
 
 <div class="player-wrapper">
   <video id="video" controls autoplay></video>
   <div id="titleOverlay">Нет названия</div>
 </div>
 
+<div id="channels"></div>
+
 <script>
 const video = document.getElementById('video');
 const statusEl = document.getElementById('status');
 const titleOverlay = document.getElementById('titleOverlay');
+const channelsEl = document.getElementById('channels');
 
-let currentUrl = '';
-let currentTitle = '';
+let channels = [];
+let currentIndex = -1;
 
-function setStatus(text) {
+function setStatus(text){
   statusEl.textContent = text;
 }
 
-async function switchVideo(newUrl, newTitle) {
-  if (!newUrl || newUrl === currentUrl) return;
+async function loadPlaylist(){
+  try{
+    const res = await fetch('playlist.m3u?t=' + Date.now());
+    const text = await res.text();
 
-  setStatus('Обновление видео...');
-  video.classList.add('fade-out');
+    const lines = text.split('\n').map(l=>l.trim()).filter(Boolean);
 
-  await new Promise(r => setTimeout(r, 500));
+    channels = [];
 
-  currentUrl = newUrl;
-  currentTitle = newTitle;
-
-  video.src = newUrl;
-  titleOverlay.textContent = newTitle || 'Без названия';
-
-  video.load();
-
-  try {
-    await video.play();
-  } catch {}
-
-  video.classList.remove('fade-out');
-  setStatus('Видео обновлено');
-}
-
-async function checkPlaylist() {
-  try {
-    setStatus('Проверка playlist...');
-
-    const response = await fetch('playlist.m3u?t=' + Date.now());
-    const text = await response.text();
-
-    const lines = text
-      .split('\n')
-      .map(l => l.trim())
-      .filter(Boolean);
-
-    const titleLine = lines.find(l => l.startsWith('#EXTINF'));
-    const newTitle = titleLine
-      ? titleLine.split(',').slice(1).join(',').trim()
-      : 'Без названия';
-
-    const newUrl = lines.find(l => l.startsWith('http'));
-
-    if (!newUrl) {
-      setStatus('Ссылка в playlist не найдена');
-      return;
+    for(let i=0;i<lines.length;i++){
+      if(lines[i].startsWith('#EXTINF')){
+        const title = lines[i].split(',').slice(1).join(',').trim();
+        const url = lines[i+1];
+        if(url && url.startsWith('http')){
+          channels.push({title,url});
+        }
+      }
     }
 
-    if (newUrl !== currentUrl) {
-      await switchVideo(newUrl, newTitle);
-    } else {
-      titleOverlay.textContent = newTitle;
-      setStatus('Без изменений');
+    renderChannels();
+
+    if(currentIndex === -1 && channels.length){
+      playChannel(0);
     }
 
-  } catch (err) {
+    setStatus('Playlist загружен');
+
+  }catch(err){
     console.error(err);
     setStatus('Ошибка загрузки playlist');
   }
 }
 
-checkPlaylist();
-setInterval(checkPlaylist, 5000);
+function renderChannels(){
+  channelsEl.innerHTML = '';
+
+  channels.forEach((ch,index)=>{
+    const btn = document.createElement('button');
+    btn.className = 'channel-btn' + (index===currentIndex?' active':'');
+    btn.textContent = ch.title;
+
+    btn.onclick = ()=>playChannel(index);
+
+    channelsEl.appendChild(btn);
+  });
+}
+
+async function playChannel(index){
+  if(index===currentIndex) return;
+
+  currentIndex = index;
+  const ch = channels[index];
+
+  video.src = ch.url;
+  titleOverlay.textContent = ch.title;
+
+  try{
+    await video.play();
+  }catch{}
+
+  renderChannels();
+}
+
+loadPlaylist();
+setInterval(loadPlaylist,10000);
 </script>
 
 </body>
