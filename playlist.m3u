@@ -1,3 +1,36 @@
 #EXTM3U
 #EXTINF:-1 Мой сервер
 http://34.178.51.187//low.m3u8
+#EXTINF:-1,Аколіт s01e01 (Цікава Ідея)
+http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e01.ci.mvo_98689/hls/1080/index.m3u8
+#EXTINF:-1,Аколіт s01e02 (Цікава Ідея)
+http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e02.ci.mvo_98690/hls/1080/index.m3u8
+#EXTINF:-1,Аколіт s01e03 (Цікава Ідея)
+http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e03.ci.mvo_99086/hls/1080/index.m3u8
+#EXTINF:-1,Аколіт s01e04 (Цікава Ідея)
+http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e04.ci.mvo_99347/hls/1080/index.m3u8
+#EXTINF:-1,Аколіт s01e05 (Цікава Ідея)
+http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e05.ci.mvo_99541/hls/1080/index.m3u8
+#EXTINF:-1,Аколіт s01e06 (Цікава Ідея)
+http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e06.ci.mvo_99809/hls/1080/index.m3u8
+#EXTINF:-1,Аколіт s01e07 (Цікава Ідея)
+http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e07.ci.mvo_100188/hls/1080/index.m3u8
+#EXTINF:-1,Аколіт s01e08 (Цікава Ідея)
+http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e08.ci.mvo_100193/hls/1080/index.m3u8
+
+#EXTINF:-1,Пінгвін 1 серія
+http://ashdi.vip/video27/2/new/the.penguin.s01e01.ua_142840/hls/1080/BqiXiHWGjudYkxH+B4s=/index.m3u8
+#EXTINF:-1,Пінгвін 2 серія
+http://ashdi.vip/video27/2/serials/the.penguin.s01e02.inside.man.2024.amzn.webdl.1080p_144965/hls/1080/BqiXiHWGjudYkxH+B4s=/index.m3u8
+#EXTINF:-1,Пінгвін 3 серія
+http://ashdi.vip/video27/2/new/the.penguin.s01e03.bliss.2024.amzn.webdl.1080p_145384/hls/1080/BqiXiHWGjudYkxH+B4s=/index.m3u8
+#EXTINF:-1,Пінгвін 4 серія
+http://ashdi.vip/video27/2/films/the.penguin.s01e04.centanni.2024.amzn.webdl.1080p_146588/hls/1080/BqiXiHWGjudYkxH+B4s=/index.m3u8
+#EXTINF:-1,Пінгвін 5 серія
+http://ashdi.vip/video27/2/serials/the.penguin.s01e05.homecoming.2024.amzn.webdl.1080p_147425/hls/1080/BqiXiHWGjudYkxH+B4s=/index.m3u8
+#EXTINF:-1,Пінгвін 6 серія
+http://ashdi.vip/video6/2/new/the.penguin.s01e06.ua.mvo.mggsunnysiders_148596/hls/1080/BqiXiHWGjudYkxH+B4s=/index.m3u8
+#EXTINF:-1,Пінгвін 7 серія
+http://ashdi.vip/video6/2/new/the.penguin.s01e07.top.hat.2024.amzn.webdl.1080p_149673/hls/1080/BqiXiHWGjudYkxH+B4s=/index.m3u8
+#EXTINF:-1,Пінгвін 8 серія
+http://ashdi.vip/video19/2/new/the.penguin.s01e08.a.great.or.little.thing.2024.amzn.webdl.1080p_150687/hls/BqiXiHWGjudYkxH+B4s=/index.m3u8
