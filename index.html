@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IPTV Portal</title>
+<title>IPTV Portal (MP4 + M3U8)</title>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
 <style>
 body{
   background:#111;
@@ -13,19 +16,23 @@ body{
   padding:20px;
   text-align:center;
 }
+
 #status{
   margin-bottom:10px;
   color:#aaa;
 }
+
 .player-wrapper{
   position:relative;
   max-width:900px;
   margin:auto;
 }
+
 #video{
   width:100%;
   background:black;
 }
+
 #titleOverlay{
   position:absolute;
   top:10px;
@@ -34,6 +41,7 @@ body{
   padding:8px 14px;
   border-radius:8px;
 }
+
 #urlDisplay{
   margin-top:10px;
   color:#66ccff;
@@ -43,6 +51,7 @@ body{
   margin-left:auto;
   margin-right:auto;
 }
+
 #channels{
   margin-top:20px;
   display:flex;
@@ -50,6 +59,7 @@ body{
   gap:10px;
   justify-content:center;
 }
+
 .channel-btn{
   padding:10px 16px;
   border:none;
@@ -58,12 +68,9 @@ body{
   color:#fff;
   cursor:pointer;
 }
-.channel-btn:hover{
-  background:#555;
-}
-.channel-btn.active{
-  background:#0084ff;
-}
+
+.channel-btn:hover{background:#555;}
+.channel-btn.active{background:#0084ff;}
 </style>
 </head>
 <body>
@@ -71,7 +78,7 @@ body{
 <div id="status">Загрузка playlist...</div>
 
 <div class="player-wrapper">
-  <video id="video" controls autoplay></video>
+  <video id="video" controls autoplay muted playsinline></video>
   <div id="titleOverlay">Нет названия</div>
 </div>
 
@@ -82,15 +89,14 @@ body{
 const video = document.getElementById('video');
 const statusEl = document.getElementById('status');
 const titleOverlay = document.getElementById('titleOverlay');
-const channelsEl = document.getElementById('channels');
 const urlDisplay = document.getElementById('urlDisplay');
+const channelsEl = document.getElementById('channels');
 
 let channels = [];
 let currentIndex = -1;
+let hlsInstance = null;
 
-function setStatus(text){
-  statusEl.textContent = text;
-}
+function setStatus(t){ statusEl.textContent = t; }
 
 async function loadPlaylist(){
   try{
@@ -98,7 +104,7 @@ async function loadPlaylist(){
     const text = await res.text();
 
     const lines = text.split('\n').map(l=>l.trim()).filter(Boolean);
-    const oldChannelsJson = JSON.stringify(channels);
+    const old = JSON.stringify(channels);
 
     channels = [];
 
@@ -116,16 +122,14 @@ async function loadPlaylist(){
 
     if(currentIndex === -1 && channels.length){
       playChannel(0);
-    } else if (JSON.stringify(channels) !== oldChannelsJson && currentIndex >= 0 && channels[currentIndex]) {
-      const idx = currentIndex;
-      currentIndex = -1;
-      playChannel(idx);
+    } else if(old !== JSON.stringify(channels) && currentIndex >= 0 && channels[currentIndex]){
+      playChannel(currentIndex);
     }
 
     setStatus('Playlist загружен');
 
-  }catch(err){
-    console.error(err);
+  }catch(e){
+    console.error(e);
     setStatus('Ошибка загрузки playlist');
   }
 }
@@ -133,38 +137,55 @@ async function loadPlaylist(){
 function renderChannels(){
   channelsEl.innerHTML = '';
 
-  channels.forEach((ch,index)=>{
-    const btn = document.createElement('button');
-    btn.className = 'channel-btn' + (index===currentIndex?' active':'');
-    btn.textContent = ch.title;
-    btn.onclick = ()=>playChannel(index);
-    channelsEl.appendChild(btn);
+  channels.forEach((ch,i)=>{
+    const b = document.createElement('button');
+    b.className = 'channel-btn' + (i===currentIndex?' active':'');
+    b.textContent = ch.title;
+    b.onclick = ()=>playChannel(i);
+    channelsEl.appendChild(b);
   });
 }
 
-async function playChannel(index){
-  if(index===currentIndex) return;
+async function playChannel(i){
+  if(i===currentIndex) return;
 
-  currentIndex = index;
-  const ch = channels[index];
+  currentIndex = i;
+  const ch = channels[i];
+
+  titleOverlay.textContent = ch.title;
+  urlDisplay.textContent = ch.url;
+
+  // очистка старого потока
+  if(hlsInstance){
+    hlsInstance.destroy();
+    hlsInstance = null;
+  }
 
   video.pause();
   video.removeAttribute('src');
   video.load();
 
-  await new Promise(r => setTimeout(r, 100));
+  // MP4
+  if(ch.url.includes('.mp4')){
+    video.src = ch.url;
+    video.load();
+    try{ await video.play(); }catch{}
+  }
 
-  video.src = ch.url;
-  video.load();
+  // M3U8
+  else if(ch.url.includes('.m3u8')){
+    if(Hls.isSupported()){
+      hlsInstance = new Hls();
+      hlsInstance.loadSource(ch.url);
+      hlsInstance.attachMedia(video);
 
-  titleOverlay.textContent = ch.title;
-  urlDisplay.textContent = ch.url;
+      hlsInstance.on(Hls.Events.MANIFEST_PARSED, async ()=>{
+        try{ await video.play(); }catch{}
+      });
 
-  try{
-    await video.play();
-  }catch(e){
-    console.error('Ошибка воспроизведения:', e);
-    setStatus('Ошибка воспроизведения видео');
+    } else {
+      setStatus('HLS не поддерживается');
+    }
   }
 
   renderChannels();
