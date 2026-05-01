@@ -1,49 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Auto IPTV Player</title>
+<style>
+  body {
+    background:#111;
+    color:#fff;
+    font-family:Arial,sans-serif;
+    text-align:center;
+    margin:0;
+    padding:20px;
+  }
+
+  #status {
+    margin-bottom:10px;
+    font-size:14px;
+    color:#aaa;
+  }
+
+  .player-wrapper {
+    position:relative;
+    width:100%;
+    max-width:900px;
+    margin:auto;
+  }
+
+  #video {
+    width:100%;
+    transition:opacity 0.5s ease;
+    opacity:1;
+    background:black;
+  }
+
+  #titleOverlay {
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:rgba(0,0,0,0.65);
+    padding:8px 14px;
+    border-radius:8px;
+    font-size:18px;
+    color:#fff;
+    pointer-events:none;
+  }
+
+  .fade-out {
+    opacity:0.2;
+  }
+</style>
+</head>
 <body>
 
-<video id="video" controls autoplay style="width:100%;max-width:900px;"></video>
+<div id="status">Инициализация...</div>
+
+<div class="player-wrapper">
+  <video id="video" controls autoplay></video>
+  <div id="titleOverlay">Нет названия</div>
+</div>
 
 <script>
 const video = document.getElementById('video');
+const statusEl = document.getElementById('status');
+const titleOverlay = document.getElementById('titleOverlay');
+
 let currentUrl = '';
+let currentTitle = '';
+
+function setStatus(text) {
+  statusEl.textContent = text;
+}
+
+async function switchVideo(newUrl, newTitle) {
+  if (!newUrl || newUrl === currentUrl) return;
+
+  setStatus('Обновление видео...');
+  video.classList.add('fade-out');
+
+  await new Promise(r => setTimeout(r, 500));
+
+  currentUrl = newUrl;
+  currentTitle = newTitle;
+
+  video.src = newUrl;
+  titleOverlay.textContent = newTitle || 'Без названия';
+
+  video.load();
+
+  try {
+    await video.play();
+  } catch {}
+
+  video.classList.remove('fade-out');
+  setStatus('Видео обновлено');
+}
 
 async function checkPlaylist() {
   try {
+    setStatus('Проверка playlist...');
+
     const response = await fetch('playlist.m3u?t=' + Date.now());
     const text = await response.text();
 
     const lines = text
       .split('\n')
-      .map(line => line.trim())
+      .map(l => l.trim())
       .filter(Boolean);
 
-    const newUrl = lines.find(line => line.startsWith('http'));
+    const titleLine = lines.find(l => l.startsWith('#EXTINF'));
+    const newTitle = titleLine
+      ? titleLine.split(',').slice(1).join(',').trim()
+      : 'Без названия';
 
-    if (newUrl && newUrl !== currentUrl) {
-      currentUrl = newUrl;
+    const newUrl = lines.find(l => l.startsWith('http'));
 
-      const wasPlaying = !video.paused;
-
-      video.src = newUrl;
-      video.load();
-
-      if (wasPlaying || currentUrl === newUrl) {
-        video.play().catch(() => {});
-      }
-
-      console.log('Видео обновлено:', newUrl);
+    if (!newUrl) {
+      setStatus('Ссылка в playlist не найдена');
+      return;
     }
+
+    if (newUrl !== currentUrl) {
+      await switchVideo(newUrl, newTitle);
+    } else {
+      titleOverlay.textContent = newTitle;
+      setStatus('Без изменений');
+    }
+
   } catch (err) {
-    console.error('Ошибка чтения playlist:', err);
+    console.error(err);
+    setStatus('Ошибка загрузки playlist');
   }
 }
 
-// Первичная загрузка
 checkPlaylist();
-
-// Проверка каждые 10 секунд
-setInterval(checkPlaylist, 10000);
+setInterval(checkPlaylist, 5000);
 </script>
 
 </body>
