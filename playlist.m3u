@@ -1,3 +1,7 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="744" tvg-logo="http://epg.cdntv.online/img/744.png" group-title="Украина",ЕКО-ТВ
+http://cdntv.online/high/7jic59vkp2tz/744.m3u8
+#EXTINF:-1 tvg-id="755" tvg-logo="http://epg.cdntv.online/img/755.png" group-title="Украина",Рада
+http://cdntv.online/high/7jic59vkp2tz/755.m3u8
 #EXTINF:-1,Весенние хлопоты YouTube
 https://rr2---sn-4g5lznl7.googlevideo.com/videoplayback?expire=1777640753&ei=0VD0afyGN7_4xN8Po7CU-A4&ip=47.65.176.221&id=o-AJZhxjflYOT-q1aLFWdi_TJpqUaX86c9-wNiktfg-X61&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=193&met=1777619153%2C&mh=It&mm=31%2C26&mn=sn-4g5lznl7%2Csn-5hnednss&ms=au%2Conr&mv=m&mvi=2&pl=16&rms=au%2Cau&initcwndbps=3166250&bui=AbKmrwo0Mp60VTAHP8E_zw2iqv9_ip63hAqBdQTSONZLuNoCP4_xl60hX44xiSn7XgTAUYbSd_DofWhB&spc=96Xrv3hh53TFqMCAtRGp21xOES2OzBzmTN7U5ZY2OOKCaDfa3cnJ&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=4892.305&lmt=1758943209178284&mt=1777618655&fvip=4&fexp=51565115%2C51565681&c=ANDROID_VR&txp=5538534&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AHEqNM4wRAIgDJ4CDT1mbokV644KJ-b_sR6cwzmyia8-wNoROtRQFZQCIEFgC_Jy8aqIiIwojG4rPSDITQLGr179_dhJUZvJwG-O&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRAIgOaTWqo4MDiIsv-HaTnJhh2GbTb2EkT3rXmpodVoSfGcCIDu-CNSoEz1NivhAZQ8EhcAQON1PG-wkDbCY5Ky1kzET
