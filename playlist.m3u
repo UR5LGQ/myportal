@@ -1,55 +1,184 @@
 #EXTM3U
-#EXTINF:-1,UA:Перший
-https://ext.cdn.nashnet.tv/228.0.2.45/index.m3u8
-#EXTINF:-1,Прямий HD
-https://ext.cdn.nashnet.tv/228.0.0.122/index.m3u8
-#EXTINF:-1 ,Київ ТБ HD
-https://ext.cdn.nashnet.tv/228.0.0.15/index.m3u8
-#EXTINF:-1 ,5 Канал HD
-https://ext.cdn.nashnet.tv/228.0.4.26/index.m3u8
-#EXTINF:-1 ,Рада HD
-https://ext.cdn.nashnet.tv/228.0.0.24/index.m3u8
-#EXTINF:-1 ,Суспільне Київ
-https://ext.cdn.nashnet.tv/228.0.0.41/index.m3u8
-#EXTINF:-1 ,Суспільне Крим
-https://ext.cdn.nashnet.tv/228.0.0.71/index.m3u8
-#EXTINF:-1 ,Суспільне Культура
-https://ext.cdn.nashnet.tv/228.0.0.141/index.m3u8
-#EXTINF:-1 ,8 Канал UA HD
-https://ext.cdn.nashnet.tv/228.0.0.138/index.m3u8
-#EXTINF:-1 ,24 Канал UA
-https://ext.cdn.nashnet.tv/228.0.0.33/index.m3u8
-#EXTINF:-1 ,Наталі
-https://ext.cdn.nashnet.tv/228.0.0.140/index.m3u8
-#EXTINF:-1 ,ЕКО–ТВ UA
-https://ext.cdn.nashnet.tv/228.0.1.60/index.m3u8
-#EXTINF:-1 ,Чорноморська ТРК
-https://ext.cdn.nashnet.tv/228.0.0.136/index.m3u8
-#EXTINF:-1 ,CNN
-https://ext.cdn.nashnet.tv/228.0.0.75/index.m3u8
-#EXTINF:-1 ,Надiя ТВ
-https://ext.cdn.nashnet.tv/228.0.0.172/index.m3u8
-#EXTINF:-1 ,Перший західний HD
-https://ext.cdn.nashnet.tv/228.0.0.162/index.m3u8
-#EXTINF:-1 ,Сонце
-https://ext.cdn.nashnet.tv/228.0.0.165/index.m3u8
-#EXTINF:-1 ,Еспресо TV HD
-https://ext.cdn.nashnet.tv/228.0.0.191/index.m3u8
-#EXTINF:-1 ,ATR HD
-https://ext.cdn.nashnet.tv/228.0.0.49/index.m3u8
-#EXTINF:-1 ,Lale HD
-https://ext.cdn.nashnet.tv/228.0.0.50/index.m3u8
-#EXTINF:-1 ,Milady television
-https://ext.cdn.nashnet.tv/228.0.1.45/index.m3u8
-#EXTINF:-1 ,КАРАВАН-ТВ UA
-https://ext.cdn.nashnet.tv/228.0.2.30/index.m3u8
-#EXTINF:-1 ,Обозреватель HD
-https://ext.cdn.nashnet.tv/228.0.0.148/index.m3u8
-#EXTINF:-1 ,Megogo live HD
-https://ext.cdn.nashnet.tv/228.0.2.214/index.m3u8
-#EXTINF:-1 ,Апостроф TV HD
-https://ext.cdn.nashnet.tv/228.0.2.165/index.m3u8
-#EXTINF:-1 ,Ісландія HD
-https://ext.cdn.nashnet.tv/228.0.3.231/index.m3u8
+#EXTM3U
+#EXTINF:0,ICTV HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6302/index.m3u8
+#EXTINF:0,ICTV UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6339/index.m3u8
+#EXTINF:0,ICTV 2 HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/15235/index.m3u8
+#EXTINF:0,1+1 Україна FHD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/987/index.m3u8
+#EXTINF:0,1+1 Україна HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31784/index.m3u8
+#EXTINF:0,1+1 Марафон HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6317/index.m3u8
+#EXTINF:0,1+1 Марафон UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/994/index.m3u8
+#EXTINF:0,2+2 HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6378/index.m3u8
+#EXTINF:0,2+2 UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/995/index.m3u8
+#EXTINF:0,ТЕТ HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6377/index.m3u8
+#EXTINF:0,ТЕТ UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/1009/index.m3u8
+#EXTINF:0,Новий Канал HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/15128/index.m3u8
+#EXTINF:0,Новий Канал UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/935/index.m3u8
+#EXTINF:0,СТБ HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/15122/index.m3u8
+#EXTINF:0,СТБ UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6304/index.m3u8
+#EXTINF:0,Інтер HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/1047/index.m3u8
+#EXTINF:0,Інтер UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6305/index.m3u8
+#EXTINF:0,НТН UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/936/index.m3u8
+#EXTINF:0,К1 HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/15125/index.m3u8
+#EXTINF:0,К1 UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31812/index.m3u8
+#EXTINF:0,К2 HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/15126/index.m3u8
+#EXTINF:0,К2 UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/930/index.m3u8
+#EXTINF:0,AMC UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31792/index.m3u8
+#EXTINF:0,Cine+ HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31794/index.m3u8
+#EXTINF:0,Cine+ Hit HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31795/index.m3u8
+#EXTINF:0,Cine+ Legend HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31797/index.m3u8
+#EXTINF:0,Cine+ Kids HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31796/index.m3u8
+#EXTINF:0,4ever Drama HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/17051/index.m3u8
+#EXTINF:0,Kino Premiere HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31815/index.m3u8
+#EXTINF:0,Kino Action HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31813/index.m3u8
+#EXTINF:0,Kino Comedy HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31814/index.m3u8
+#EXTINF:0,Kinosweet HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31816/index.m3u8
+#EXTINF:0,FilmBox UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/15266/index.m3u8
+#EXTINF:0,FilmBox ArtHouse
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/15265/index.m3u8
+#EXTINF:0,FilmBox ArtHouse UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31807/index.m3u8
+#EXTINF:0,FilmUA Drama UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31805/index.m3u8
+#EXTINF:0,FilmUA Live HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31808/index.m3u8
+#EXTINF:0,Enter-фільм HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/15273/index.m3u8
+#EXTINF:0,Star Cinema FHD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/15262/index.m3u8
+#EXTINF:0,Star Cinema HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/992/index.m3u8
+#EXTINF:0,Бігуді UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6330/index.m3u8
+#EXTINF:0,Bolt FHD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/991/index.m3u8
+#EXTINF:0,Bolt HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31793/index.m3u8
+#EXTINF:0,Світло HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31744/index.m3u8
+#EXTINF:0,Мега HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/15124/index.m3u8
+#EXTINF:0,Мега UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/929/index.m3u8
+#EXTINF:0,Zoom HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/15130/index.m3u8
+#EXTINF:0,Zoom UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/1000/index.m3u8
+#EXTINF:0,Оце HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6375/index.m3u8
+#EXTINF:0,Оце UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6380/index.m3u8
+#EXTINF:0,Дім UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31776/index.m3u8
+#EXTINF:0,FreeДом UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31810/index.m3u8
+#EXTINF:0,Kvartal TV HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31780/index.m3u8
+#EXTINF:0,Kvartal TV UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/932/index.m3u8
+#EXTINF:0,Перший HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6376/index.m3u8
+#EXTINF:0,Суспільне Культура HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31747/index.m3u8
+#EXTINF:0,Суспільне Київ HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31745/index.m3u8
+#EXTINF:0,Суспільне Крим FHD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31746/index.m3u8
+#EXTINF:0,Суспільне Крим HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/1017/index.m3u8
+#EXTINF:0,Тернопіль 1 UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/5041/index.m3u8
+#EXTINF:0,8 Канал FHD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/6327/index.m3u8
+#EXTINF:0,5 Канал HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/1030/index.m3u8
+#EXTINF:0,24 Канал HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/1063/index.m3u8
+#EXTINF:0,Київ HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31781/index.m3u8
+#EXTINF:0,Перший Міський FHD (Одеса) UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31737/index.m3u8
+#EXTINF:0,Перший Міський HD (Одеса) UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/981/index.m3u8
+#EXTINF:0,Перший Міський HD (Кривий Ріг) UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31736/index.m3u8
+#EXTINF:0,Перший Західний HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31752/index.m3u8
+#EXTINF:0,ЕТНО Канал HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31777/index.m3u8
+#EXTINF:0,Ми Україна UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31731/index.m3u8
+#EXTINF:0,Галичина HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31772/index.m3u8
+#EXTINF:0,Прямий HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/1015/index.m3u8
+#EXTINF:0,Eco TV HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/1006/index.m3u8
+#EXTINF:0,Eco TV UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/15275/index.m3u8
+#EXTINF:0,11 Канал HD (Дніпро) UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31785/index.m3u8
+#EXTINF:0,Obozrevatel TV FHD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31734/index.m3u8
+#EXTINF:0,Obozrevatel TV HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/1028/index.m3u8
+#EXTINF:0,Ісландія HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31769/index.m3u8
+#EXTINF:0,Армія TV HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31771/index.m3u8
+#EXTINF:0,Закон ТВ HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31778/index.m3u8
+#EXTINF:0,Київ UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/1045/index.m3u8
+#EXTINF:0,Уніaн Серіал HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/1023/index.m3u8
+#EXTINF:0,Уніaн Серіал UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31726/index.m3u8
+#EXTINF:0,Рада FHD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/976/index.m3u8
+#EXTINF:0,Рада HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31739/index.m3u8
+#EXTINF:0,НТА HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31732/index.m3u8
+#EXTINF:0,Аверс UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31770/index.m3u8
+#EXTINF:0,D1 HD UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/31798/index.m3u8
+#EXTINF:0,СК1 UA
+http://2tcfnzbp.rostelekom.xyz/iptv/RHEVSYRGZELQMG/982/index.m3u8
+#EXTINF:-1, Приятного просмотра
+https://alensat.at.ua/alensat.com.mp4
 #EXTINF:-1,Мой сервер
 http://34.178.51.187//low.m3u8
