@@ -1,6 +1,4 @@
 #EXTM3U
-#EXTINF:-1,Мой сервер
-http://34.178.51.187//low.m3u8
 #EXTINF:-1,Аколіт s01e01 (Цікава Ідея)
 http://calypso.tortuga.wtf/content/stream/serials/the.acolyte.s01e01.ci.mvo_98689/hls/1080/index.m3u8
 #EXTINF:-1,Аколіт s01e02 (Цікава Ідея)
@@ -34,3 +32,5 @@ http://ashdi.vip/video6/2/new/the.penguin.s01e06.ua.mvo.mggsunnysiders_148596/hl
 http://ashdi.vip/video6/2/new/the.penguin.s01e07.top.hat.2024.amzn.webdl.1080p_149673/hls/1080/BqiXiHWGjudYkxH+B4s=/index.m3u8
 #EXTINF:-1,Пінгвін 8 серія
 http://ashdi.vip/video19/2/new/the.penguin.s01e08.a.great.or.little.thing.2024.amzn.webdl.1080p_150687/hls/BqiXiHWGjudYkxH+B4s=/index.m3u8
+#EXTINF:-1,Мой сервер
+http://34.178.51.187//low.m3u8
