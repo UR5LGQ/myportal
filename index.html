@@ -37,18 +37,23 @@
             height: 100%;
             display: block;
         }
-        .playlist-container {
+        .playlist-container, .m3u-channels-container {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
-        .channel-card {
+        .channel-card, .m3u-item {
             background: #fff;
             border-radius: 8px;
             padding: 15px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             display: flex;
             align-items: center;
+            justify-content: space-between;
+        }
+        .m3u-item {
+            background: #eef2f7;
+            border-left: 5px solid #007bff;
         }
         .channel-logo {
             width: 50px;
@@ -70,7 +75,7 @@
         .channel-desc {
             font-size: 14px;
             color: #666;
-            margin: 0 0 10px 0;
+            margin: 0;
         }
         .btn {
             display: inline-block;
@@ -86,11 +91,30 @@
         .btn:hover {
             background-color: #0056b3;
         }
-        .btn-download {
-            background-color: #28a745;
+        .btn-open {
+            background-color: #ff9800;
         }
-        .btn-download:hover {
-            background-color: #218838;
+        .btn-open:hover {
+            background-color: #e68a00;
+        }
+        .btn-close {
+            background-color: #dc3545;
+        }
+        .btn-close:hover {
+            background-color: #bd2130;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-top: 10px;
+        }
+        .section-title {
+            font-size: 20px;
+            color: #444;
+            margin: 0;
         }
     </style>
 </head>
@@ -104,16 +128,29 @@
         <video id="video" controls></video>
     </div>
 
-    <!-- Список каналов -->
+    <!-- Основной список разделов из XML -->
     <div id="playlist" class="playlist-container"></div>
+
+    <!-- Сюда выводится контент из плейлиста -->
+    <div id="m3uSubList" style="display: none;">
+        <div class="section-header">
+            <div class="section-title" id="m3uTitle">Содержимое плейлиста</div>
+            <!-- Новая кнопка скрытия списка -->
+            <button class="btn btn-close" onclick="closeM3UList()">Свернуть список</button>
+        </div>
+        <div id="m3uChannels" class="m3u-channels-container" style="margin-top: 15px;"></div>
+    </div>
 </div>
 
-<!-- Подключение локального файла библиотеки hls.js из вашей папки -->
+<!-- Подключение локального файла hls.js -->
 <script src="hls.js"></script>
 
 <script>
     const video = document.getElementById('video');
     const playerSection = document.getElementById('playerSection');
+    const m3uSubList = document.getElementById('m3uSubList');
+    const m3uChannels = document.getElementById('m3uChannels');
+    const m3uTitle = document.getElementById('m3uTitle');
     let hls = null;
 
     // Ваш XML-код
@@ -140,48 +177,105 @@
     const channels = xmlDoc.getElementsByTagName("channel");
     const playlistContainer = document.getElementById("playlist");
 
-    // Вывод каналов на страницу
+    // Вывод главного меню
     for (let i = 0; i < channels.length; i++) {
         const channel = channels[i];
         
-        const title = channel.getElementsByTagName("title")[0]?.textContent || "Без названия";
-        const logo = channel.getElementsByTagName("logo_30x30")[0]?.textContent || "";
-        const description = channel.getElementsByTagName("description")[0]?.textContent || "";
-        const playlistUrl = channel.getElementsByTagName("playlist_url")[0]?.textContent;
-        const streamUrl = channel.getElementsByTagName("stream_url")[0]?.textContent;
+        const title = channel.getElementsByTagName("title")?.textContent || "Без названия";
+        const logo = channel.getElementsByTagName("logo_30x30")?.textContent || "";
+        const description = channel.getElementsByTagName("description")?.textContent || "";
+        const playlistUrl = channel.getElementsByTagName("playlist_url")?.textContent;
+        const streamUrl = channel.getElementsByTagName("stream_url")?.textContent;
 
         const card = document.createElement("div");
         card.className = "channel-card";
 
         let buttonHTML = '';
         if (playlistUrl) {
-            buttonHTML = `<a href="${playlistUrl}" class="btn btn-download" target="_blank">Скачать .m3u плейлист</a>`;
+            buttonHTML = `<button class="btn btn-open" onclick="loadAndParseM3U('${playlistUrl}', '${title}')">Открыть список</button>`;
         } else if (streamUrl) {
-            buttonHTML = `<button class="btn" onclick="playStream('${streamUrl}')">Смотреть онлайн</button>`;
+            buttonHTML = `<button class="btn" onclick="playStream('${streamUrl}')">Смотреть поток</button>`;
         }
 
         card.innerHTML = `
-            <img src="${logo || 'placeholder.com'}" class="channel-logo" alt="Logo">
-            <div class="channel-info">
-                <div class="channel-title">${title}</div>
-                ${description ? `<div class="channel-desc">${description}</div>` : ''}
-                ${buttonHTML}
+            <div style="display: flex; align-items: center;">
+                <img src="${logo || 'placeholder.com'}" class="channel-logo" alt="Logo">
+                <div class="channel-info">
+                    <div class="channel-title">${title}</div>
+                    ${description ? `<div class="channel-desc">${description}</div>` : ''}
+                </div>
             </div>
+            ${buttonHTML}
         `;
 
         playlistContainer.appendChild(card);
     }
 
-    // Логика запуска потока через hls.js
+    // Загрузка плейлиста
+    function loadAndParseM3U(url, playlistName) {
+        m3uChannels.innerHTML = "Загрузка каналов...";
+        m3uSubList.style.display = "block";
+        m3uTitle.textContent = `Каналы из: ${playlistName}`;
+        m3uSubList.scrollIntoView({ behavior: 'smooth' });
+
+        fetch(url)
+            .then(response => {
+                if (!response.ok) throw new Error('Ошибка сети');
+                return response.text();
+            })
+            .then(text => {
+                parseM3UContent(text);
+            })
+            .catch(error => {
+                m3uChannels.innerHTML = `<span style="color: red;">Не удалось загрузить плейлист.</span>`;
+            });
+    }
+
+    // Парсер M3U
+    function parseM3UContent(text) {
+        m3uChannels.innerHTML = "";
+        const lines = text.split('\n');
+        let currentTitle = "";
+
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].trim();
+
+            if (line.startsWith('#EXTINF:')) {
+                const commaIndex = line.lastIndexOf(',');
+                currentTitle = commaIndex !== -1 ? line.substring(commaIndex + 1).trim() : "Без названия";
+            } else if (line.startsWith('http') && currentTitle !== "") {
+                const streamUrl = line;
+                const item = document.createElement('div');
+                item.className = 'm3u-item';
+                item.innerHTML = `
+                    <div class="channel-title">${currentTitle}</div>
+                    <button class="btn" onclick="playStream('${streamUrl}')">Воспроизвести</button>
+                `;
+                m3uChannels.appendChild(item);
+                currentTitle = "";
+            }
+        }
+
+        if (m3uChannels.children.length === 0) {
+            m3uChannels.innerHTML = "В плейлисте не найдено видеофайлов.";
+        }
+    }
+
+    // Функция скрытия списка
+    function closeM3UList() {
+        m3uSubList.style.display = "none";
+        m3uChannels.innerHTML = ""; // Очищаем память от старых элементов
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Возвращаем пользователя наверх страницы
+    }
+
+    // Воспроизведение
     function playStream(url) {
         playerSection.style.display = 'block';
 
-        // Сброс предыдущей сессии плеера при переключении каналов
         if (hls) {
             hls.destroy();
         }
 
-        // Если браузер поддерживает hls.js (Chrome, Firefox, Edge, PC Safari)
         if (Hls.isSupported()) {
             hls = new Hls();
             hls.loadSource(url);
@@ -189,9 +283,7 @@
             hls.on(Hls.Events.MANIFEST_PARSED, function() {
                 video.play();
             });
-        } 
-        // Если браузер поддерживает HLS нативно (Safari на iOS/macOS, Android)
-        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
             video.src = url;
             video.addEventListener('loadedmetadata', function() {
                 video.play();
