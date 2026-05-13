@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPTV Портал с плеером</title>
-    
-    <!-- Подключаем стили и скрипты Video.js для работы m3u8 -->
-    <link href="zencdn.net" rel="stylesheet" />
-    
+    <title>Локальный IPTV Портал</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,21 +23,20 @@
             text-align: center;
             margin: 0;
         }
-        /* Стили для секции плеера */
         .player-section {
             background: #000;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            display: none; /* Скрыт, пока не выберут поток */
+            display: none;
             aspect-ratio: 16 / 9;
             width: 100%;
         }
-        .video-js {
+        video {
             width: 100%;
             height: 100%;
+            display: block;
         }
-        /* Стили списка каналов */
         .playlist-container {
             display: flex;
             flex-direction: column;
@@ -104,30 +99,29 @@
 <div class="container">
     <h1>Мой IPTV Портал</h1>
 
-    <!-- Контейнер для встроенного плеера -->
+    <!-- Локальный HTML5 Видеоплеер -->
     <div id="playerSection" class="player-section">
-        <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto">
-            <p class="vjs-no-js">Для просмотра видео включите JavaScript или обновите браузер.</p>
-        </video>
+        <video id="video" controls></video>
     </div>
 
     <!-- Список каналов -->
     <div id="playlist" class="playlist-container"></div>
 </div>
 
-<!-- Скрипт Video.js -->
-<script src="zencdn.net"></script>
+<!-- Подключение локального файла библиотеки hls.js из вашей папки -->
+<script src="hls.js"></script>
 
 <script>
-    // Инициализируем плеер Video.js
-    const player = videojs('my-video');
+    const video = document.getElementById('video');
+    const playerSection = document.getElementById('playerSection');
+    let hls = null;
 
     // Ваш XML-код
     const xmlString = `
     <items>
         <channel>
             <title>Мой плейлист IPTV</title>
-            <logo_30x30>placeholder.com</logo_30x30>
+            <logo_30x30>https://placeholder.com</logo_30x30>
             <description>Здесь мои каналы</description>
             <playlist_url>github.io</playlist_url>
         </channel>
@@ -144,14 +138,13 @@
     const xmlDoc = parser.parseFromString(xmlString, "text/xml");
     const channels = xmlDoc.getElementsByTagName("channel");
     const playlistContainer = document.getElementById("playlist");
-    const playerSection = document.getElementById('playerSection');
 
-    // Генерация интерфейса
+    // Вывод каналов на страницу
     for (let i = 0; i < channels.length; i++) {
         const channel = channels[i];
         
         const title = channel.getElementsByTagName("title")[0]?.textContent || "Без названия";
-        const logo = channel.getElementsByTagName("logo_30x30")[0]?.textContent || "placeholder.com";
+        const logo = channel.getElementsByTagName("logo_30x30")[0]?.textContent || "";
         const description = channel.getElementsByTagName("description")[0]?.textContent || "";
         const playlistUrl = channel.getElementsByTagName("playlist_url")[0]?.textContent;
         const streamUrl = channel.getElementsByTagName("stream_url")[0]?.textContent;
@@ -159,7 +152,6 @@
         const card = document.createElement("div");
         card.className = "channel-card";
 
-        // Логика кнопок в зависимости от типа контента
         let buttonHTML = '';
         if (playlistUrl) {
             buttonHTML = `<a href="${playlistUrl}" class="btn btn-download" target="_blank">Скачать .m3u плейлист</a>`;
@@ -179,25 +171,37 @@
         playlistContainer.appendChild(card);
     }
 
-    // Функция переключения и запуска трансляции в плеере
+    // Логика запуска потока через hls.js
     function playStream(url) {
-        // Показываем контейнер с плеером
         playerSection.style.display = 'block';
-        
-        // Меняем источник видео и тип на HLS (application/x-mpegURL)
-        player.src({
-            src: url,
-            type: 'application/x-mpegURL'
-        });
 
-        // Запускаем воспроизведение
-        player.play();
-        
-        // Плавный скролл к плееру
+        // Сброс предыдущей сессии плеера при переключении каналов
+        if (hls) {
+            hls.destroy();
+        }
+
+        // Если браузер поддерживает hls.js (Chrome, Firefox, Edge, PC Safari)
+        if (Hls.isSupported()) {
+            hls = new Hls();
+            hls.loadSource(url);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                video.play();
+            });
+        } 
+        // Если браузер поддерживает HLS нативно (Safari на iOS/macOS, Android)
+        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = url;
+            video.addEventListener('loadedmetadata', function() {
+                video.play();
+            });
+        }
+
         playerSection.scrollIntoView({ behavior: 'smooth' });
     }
 </script>
 
 </body>
 </html>
+
 
