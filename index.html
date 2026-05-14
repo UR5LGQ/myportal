@@ -135,7 +135,6 @@
     <div id="m3uSubList" style="display: none;">
         <div class="section-header">
             <div class="section-title" id="m3uTitle">Содержимое плейлиста</div>
-            <!-- Новая кнопка скрытия списка -->
             <button class="btn btn-close" onclick="closeM3UList()">Свернуть список</button>
         </div>
         <div id="m3uChannels" class="m3u-channels-container" style="margin-top: 15px;"></div>
@@ -153,20 +152,20 @@
     const m3uTitle = document.getElementById('m3uTitle');
     let hls = null;
 
-    // Ваш XML-код
-    const xmlString = `
+    // Ваш XML-код (полные оригинальные ссылки возвращены на место)
+    const xmlString = `<?xml version="1.0" encoding="UTF-8"?>
     <items>
         <channel>
             <title>Мой плейлист IPTV</title>
-             <logo_30x30>https://placeholder.com</logo_30x30>
+            <logo_30x30>https://placeholder.com</logo_30x30>
             <description>Здесь мои каналы</description>
             <playlist_url>https://ur5lgq.github.io/myportal/playlist.m3u</playlist_url>
         </channel>
         <channel>
             <title>Мой сервер</title>
-            <description>Транскодер</description>
             <logo_30x30></logo_30x30>
-            <stream_url>http://34.178.51.187//low.m3u8</stream_url>
+            <description>Транскодер</description>
+            <stream_url>http://34.178.51.187/low.m3u8</stream_url>
         </channel>
     </items>
     `;
@@ -181,11 +180,18 @@
     for (let i = 0; i < channels.length; i++) {
         const channel = channels[i];
         
-        const title = channel.getElementsByTagName("title")?.textContent || "Без названия";
-        const logo = channel.getElementsByTagName("logo_30x30")?.textContent || "";
-        const description = channel.getElementsByTagName("description")?.textContent || "";
-        const playlistUrl = channel.getElementsByTagName("playlist_url")?.textContent;
-        const streamUrl = channel.getElementsByTagName("stream_url")?.textContent;
+        // Исправлено: добавлены индексы [0] для правильного извлечения текста элементов XML
+        const titleEl = channel.getElementsByTagName("title")[0];
+        const logoEl = channel.getElementsByTagName("logo_30x30")[0];
+        const descEl = channel.getElementsByTagName("description")[0];
+        const playlistUrlEl = channel.getElementsByTagName("playlist_url")[0];
+        const streamUrlEl = channel.getElementsByTagName("stream_url")[0];
+
+        const title = titleEl ? titleEl.textContent : "Без названия";
+        const logo = logoEl ? logoEl.textContent : "";
+        const description = descEl ? descEl.textContent : "";
+        const playlistUrl = playlistUrlEl ? playlistUrlEl.textContent : null;
+        const streamUrl = streamUrlEl ? streamUrlEl.textContent : null;
 
         const card = document.createElement("div");
         card.className = "channel-card";
@@ -197,9 +203,12 @@
             buttonHTML = `<button class="btn" onclick="playStream('${streamUrl}')">Смотреть поток</button>`;
         }
 
+        // В качестве заглушки для логотипа используется серый блок, если картинки нет
+        const logoSrc = logo ? logo : 'data:image/svg+xml;utf8,<svg xmlns="w3.org" width="50" height="50" viewBox="0 0 50 50"><rect width="50" height="50" fill="%23ddd"/><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="10" fill="%23666">No Logo</text></svg>';
+
         card.innerHTML = `
-            <div style="display: flex; align-items: center;">
-                <img src="${logo || 'placeholder.com'}" class="channel-logo" alt="Logo">
+            <div style="display: flex; align-items: center; flex-grow: 1; margin-right: 15px;">
+                <img src="${logoSrc}" class="channel-logo" alt="Logo">
                 <div class="channel-info">
                     <div class="channel-title">${title}</div>
                     ${description ? `<div class="channel-desc">${description}</div>` : ''}
@@ -227,7 +236,7 @@
                 parseM3UContent(text);
             })
             .catch(error => {
-                m3uChannels.innerHTML = `<span style="color: red;">Не удалось загрузить плейлист.</span>`;
+                m3uChannels.innerHTML = `<span style="color: red;">Не удалось загрузить плейлист. Возможно, сервер блокирует внешние запросы (CORS).</span>`;
             });
     }
 
@@ -264,11 +273,11 @@
     // Функция скрытия списка
     function closeM3UList() {
         m3uSubList.style.display = "none";
-        m3uChannels.innerHTML = ""; // Очищаем память от старых элементов
-        window.scrollTo({ top: 0, behavior: 'smooth' }); // Возвращаем пользователя наверх страницы
+        m3uChannels.innerHTML = "";
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Воспроизведение
+    // Воспроизведение через hls.js
     function playStream(url) {
         playerSection.style.display = 'block';
 
